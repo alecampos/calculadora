@@ -26,6 +26,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.FlowLayout;
 import java.awt.Toolkit;
+import javax.swing.JMenuBar;
 
 public class Calc extends JFrame {
 
@@ -62,7 +63,7 @@ public class Calc extends JFrame {
 				Calc.class.getResource("/media/icono_calculadora.png")));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 194, 269);
+		setBounds(100, 100, 194, 284);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -71,7 +72,7 @@ public class Calc extends JFrame {
 
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.BLACK);
-		panel.setBounds(4, 0, 176, 39);
+		panel.setBounds(4, 20, 176, 39);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
@@ -84,7 +85,7 @@ public class Calc extends JFrame {
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.BLACK);
-		panel_1.setBounds(10, 46, 170, 184);
+		panel_1.setBounds(10, 63, 170, 184);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 
@@ -281,6 +282,10 @@ public class Calc extends JFrame {
 		});
 		borrar.setBounds(0, 144, 170, 40);
 		panel_1.add(borrar);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 188, 21);
+		contentPane.add(menuBar);
 	}
 
 	// /////////--------------------
